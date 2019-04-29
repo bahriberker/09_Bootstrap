@@ -23,5 +23,9 @@ namespace _09_Bootstrap.Controllers
         {
             return View();
         }
+        public ActionResult index()
+        {
+            return View();
+        }
     }
 }
