@@ -1,4 +1,4 @@
-﻿
+﻿@model List<Message>
 @{
     Layout = null;
 }
@@ -16,6 +16,12 @@
         <br /><br />
            
         @Html.Alert("alert1","success","Ipsum gravida vel pretium tellus tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut.")
+    <hr />
+        @foreach(Message item in Model)
+        {
+            @Html.AlertFor(x=>item,new { title = item.Text, level = item.Level })
+        }
+        
     </div>
 </body>
 </html>
